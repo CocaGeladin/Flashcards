@@ -34,3 +34,8 @@ criaCartao(
     'Introdução, Desenvolvimento e Conclusão'
 )
 
+criaCartao(
+    'História',
+    'Qual o nome da guerra entre USA e URSS?',
+    'Guerra Fria'
+)
