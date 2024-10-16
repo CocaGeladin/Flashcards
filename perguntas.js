@@ -23,13 +23,13 @@ criaCartao(
 )
 
 criaCartao(
-    'Matemática,
+    'Matemática',
     'Como achamaos o x de uma função de 2ºgrau?',
     'Usamos a formula de baskhara'
 )
 
 criaCartao(
-    'Português,
+    'Português',
     'Qual a estrutura de um artigo de opinião?',
     'Introdução, Desenvolvimento e Conclusão'
 )
