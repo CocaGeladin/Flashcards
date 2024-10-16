@@ -21,3 +21,16 @@ criaCartao(
     'Como se diz oi em Inglês?',
     'Oi em ingles é HI (RAI)'
 )
+
+criaCartao(
+    'Matemática,
+    'Como achamaos o x de uma função de 2ºgrau?',
+    'Usamos a formula de baskhara'
+)
+
+criaCartao(
+    'Português,
+    'Qual a estrutura de um artigo de opinião?',
+    'Introdução, Desenvolvimento e Conclusão'
+)
+
