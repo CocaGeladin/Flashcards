@@ -1,20 +1,19 @@
-// Função para criar cartões
 function criaCartao(categoria, pergunta, resposta) {
     let container = document.getElementById('container');
     let cartao = document.createElement('article');
     cartao.className = 'cartao';
 
-   cartao.innerHTML = `
-    <div class="cartao__conteudo">
-        <div class="cartao__conteudo__pergunta">
-            <h3>${categoria}</h3>
-            <p>${pergunta}</p>
+    cartao.innerHTML = `
+        <div class="cartao__conteudo">
+            <div class="cartao__conteudo__pergunta">
+                <h3>${categoria}</h3>
+                <p>${pergunta}</p>
+            </div>
+            <div class="cartao__conteudo__resposta">
+                <p>${resposta}</p>
+            </div>
         </div>
-        <div class="cartao__conteudo__resposta">
-            <p>${resposta}</p>
-        </div>
-    </div>
-`;
+    `;
 
     let respostaEstaVisivel = false;
 
@@ -27,12 +26,10 @@ function criaCartao(categoria, pergunta, resposta) {
     container.appendChild(cartao);
 }
 
-// Função para carregar as perguntas
-function carregarPerguntas(perguntas) {
-    perguntas.forEach(pergunta => {
-        criaCartao(pergunta.categoria, pergunta.pergunta, pergunta.resposta);
-    });
-}
+// Exemplo de perguntas
+const perguntas = [
+    { categoria: "Programação", pergunta: "O que é JavaScript?", resposta: "O JavaScript é uma linguagem de programação." },
+    { categoria: "HTML", pergunta: "O que é HTML?", resposta: "HTML é a linguagem de marcação para criar páginas web." }
+];
 
-// Supondo que você tenha uma função para obter perguntas de perguntas.js
-carregarPerguntas(perguntas);
+perguntas.forEach(p => criaCartao(p.categoria, p.pergunta, p.resposta));
