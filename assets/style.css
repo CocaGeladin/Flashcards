@@ -22,12 +22,13 @@ body {
     height: 20rem;
     flex-grow: 1;
     flex-basis: calc(33% - 6rem);
+    position: relative; /* Necessário para o efeito 3D */
+    perspective: 1000px; /* Define a perspectiva */
 }
 
 .cartao__conteudo {
     background-color: var(--card-front-color);
     text-align: center;
-    /* background-color: aquamarine; */
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 300ms ease-in-out;
@@ -46,9 +47,8 @@ body {
 }
 
 .cartao__conteudo p {
-    margin-top: 1rem;
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: 4rem; /* Mantenha apenas esta linha */
     font-size: 1.4vw;
 }
 
@@ -77,8 +77,15 @@ body {
 
 .cartao__conteudo__resposta {
     transform: rotateY(180deg);
-    background-color: rgba(0, 244, 191, 0.2);
-    border: 4px solid var(--card-back-color);
+    display: none; /* Inicialmente escondido */
+}
+
+.cartao.active .cartao__conteudo__resposta {
+    display: block; /* Exibe quando ativo */
+}
+
+.cartao.active .cartao__conteudo__pergunta {
+    display: none; /* Esconde quando ativo */
 }
 
 footer {
@@ -97,13 +104,13 @@ footer p {
 }
 
 @media (max-width: 560px) {
-    
     body {
-        background: url('img/bg-mobile.webp'), no-repeat cover;
+        background: url('img/bg-mobile.webp') no-repeat;
+        background-size: cover;
     }
 
     .cartao {
-        flex: 1 0 calc(100% - 1rem)
+        flex: 1 0 calc(100% - 1rem);
     }
 
     .cartao__conteudo h3 {
