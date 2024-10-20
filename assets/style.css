@@ -18,12 +18,12 @@ body {
 }
 
 .cartao {
-    margin: 1rem 1rem;
+    margin: 1rem;
     height: 20rem;
     flex-grow: 1;
     flex-basis: calc(33% - 6rem);
-    position: relative;
-    perspective: 1000px; /* Para o efeito 3D */
+    position: relative; /* Necessário para o efeito 3D */
+    perspective: 1000px; /* Define a perspectiva */
 }
 
 .cartao__conteudo {
@@ -32,6 +32,38 @@ body {
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 300ms ease-in-out;
+}
+
+.cartao__conteudo h3 {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    text-align: left;
+    padding: 0.5rem;
+    position: absolute;
+    margin: 0.6rem;
+    border-radius: 0.6rem;
+    font-size: 1vw;
+    backface-visibility: hidden;
+}
+
+.cartao__conteudo p {
+    padding: 2rem;
+    margin-top: 4rem; /* Mantenha apenas esta linha */
+    font-size: 1.4vw;
+}
+
+.cartao__conteudo__pergunta p {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.cartao__conteudo__resposta p {
+    color: var(--card-back-color);
+    font-weight: 700;
+}
+
+.cartao.active .cartao__conteudo {
+    transform: rotateY(180deg);
 }
 
 .cartao__conteudo__pergunta,
@@ -43,61 +75,16 @@ body {
     box-sizing: border-box;
 }
 
-.cartao__conteudo__pergunta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .cartao__conteudo__resposta {
     transform: rotateY(180deg);
     display: none; /* Inicialmente escondido */
 }
 
-.cartao.active .cartao__conteudo {
-    transform: rotateY(180deg);
+.cartao.active .cartao__conteudo__resposta {
+    display: flex; /* Mostra a resposta quando ativo */
+    justify-content: center;
+    align-items: center;
 }
 
 .cartao.active .cartao__conteudo__pergunta {
-    display: none; /* Esconde a pergunta quando ativo */
-}
-
-.cartao.active .cartao__conteudo__resposta {
-    display: flex; /* Exibe a resposta quando ativo */
-    align-items: center;
-    justify-content: center;
-}
-
-footer {
-    background-color: black;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2rem;
-}
-
-footer p {
-    text-align: center;
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
-}
-
-@media (max-width: 560px) {
-    body {
-        background: url('img/bg-mobile.webp') no-repeat;
-        background-size: cover;
-    }
-
-    .cartao {
-        flex: 1 0 calc(100% - 1rem);
-    }
-
-    .cartao__conteudo h3 {
-        font-size: 3vw;
-    }
-
-    .cartao__conteudo p {
-        font-size: 3.8vw;
-    }
-}
+    display: none; /* Esconde a pergunta qua
