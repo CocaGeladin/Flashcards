@@ -81,12 +81,13 @@ body {
 }
 
 .cartao.active .cartao__conteudo__resposta {
-    display: block; /* Exibe quando ativo */
+    display: block; /* Mostra a resposta quando ativo */
 }
 
 .cartao.active .cartao__conteudo__pergunta {
-    display: none; /* Esconde quando ativo */
+    display: none; /* Esconde a pergunta quando ativo */
 }
+
 
 footer {
     background-color: black;
