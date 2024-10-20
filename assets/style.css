@@ -57,6 +57,10 @@ body {
     font-weight: 500;
 }
 
+.cartao.active .cartao__conteudo__pergunta p {
+   display:none;
+}
+
 .cartao__conteudo__resposta p {
     color: var(--card-back-color);
     font-weight: 700;
