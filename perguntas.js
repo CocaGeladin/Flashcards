@@ -24,7 +24,7 @@ criaCartao(
 
 criaCartao(
     'Matemática',
-    'Como achamaos o x de uma função de 2ºgrau?',
+    'Como achamos o x de uma função de 2ºgrau?',
     'Usamos a formula de baskhara'
 )
 
