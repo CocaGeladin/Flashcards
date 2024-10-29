@@ -60,7 +60,7 @@ body {
 }
 
 .cartao__conteudo__resposta p {
-    color: var(--card-back-color);
+    color: #cb00f4;
     font-weight: 700;
 }
 
