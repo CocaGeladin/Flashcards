@@ -1,7 +1,7 @@
 :root {
     --text-color: #AC99F0;
     --card-front-color: #7951ED;
-    --card-back-color: #cb00f4;
+    --card-back-color: #bb7ef0;
 }
 
 body {
@@ -60,7 +60,7 @@ body {
 }
 
 .cartao__conteudo__resposta p {
-    color: #cb00f4;
+    color: #bb7ef0;
     font-weight: 700;
 }
 
